@@ -1,0 +1,445 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B8861A115BB216D000A63A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8861A015BB216D000A63A1 /* UIKit.framework */; };
+		3B8861A315BB216D000A63A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8861A215BB216D000A63A1 /* Foundation.framework */; };
+		3B8861A515BB216D000A63A1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8861A415BB216D000A63A1 /* CoreGraphics.framework */; };
+		3B8861AB15BB216D000A63A1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B8861A915BB216D000A63A1 /* InfoPlist.strings */; };
+		3B8861AD15BB216D000A63A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8861AC15BB216D000A63A1 /* main.m */; };
+		3B8861B115BB216D000A63A1 /* PBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8861B015BB216D000A63A1 /* PBAppDelegate.m */; };
+		3B8861B415BB216D000A63A1 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B8861B215BB216D000A63A1 /* MainStoryboard.storyboard */; };
+		3B8861B715BB216D000A63A1 /* PBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8861B615BB216D000A63A1 /* PBViewController.m */; };
+		3B8861BF15BB216D000A63A1 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8861BE15BB216D000A63A1 /* SenTestingKit.framework */; };
+		3B8861C015BB216D000A63A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8861A015BB216D000A63A1 /* UIKit.framework */; };
+		3B8861C115BB216D000A63A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8861A215BB216D000A63A1 /* Foundation.framework */; };
+		3B8861C915BB216D000A63A1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B8861C715BB216D000A63A1 /* InfoPlist.strings */; };
+		3B8861CC15BB216D000A63A1 /* PlanterBoxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8861CB15BB216D000A63A1 /* PlanterBoxTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3B8861C215BB216D000A63A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B88619315BB216D000A63A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B88619B15BB216D000A63A1;
+			remoteInfo = PlanterBox;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3B88619C15BB216D000A63A1 /* PlanterBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanterBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B8861A015BB216D000A63A1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3B8861A215BB216D000A63A1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3B8861A415BB216D000A63A1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3B8861A815BB216D000A63A1 /* PlanterBox-Info.plist */ = {isa = PBXFileReference; path = "PlanterBox-Info.plist"; sourceTree = "<group>"; };
+		3B8861AA15BB216D000A63A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3B8861AC15BB216D000A63A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3B8861AE15BB216D000A63A1 /* PlanterBox-Prefix.pch */ = {isa = PBXFileReference; path = "PlanterBox-Prefix.pch"; sourceTree = "<group>"; };
+		3B8861AF15BB216D000A63A1 /* PBAppDelegate.h */ = {isa = PBXFileReference; path = PBAppDelegate.h; sourceTree = "<group>"; };
+		3B8861B015BB216D000A63A1 /* PBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PBAppDelegate.m; sourceTree = "<group>"; };
+		3B8861B315BB216D000A63A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		3B8861B515BB216D000A63A1 /* PBViewController.h */ = {isa = PBXFileReference; path = PBViewController.h; sourceTree = "<group>"; };
+		3B8861B615BB216D000A63A1 /* PBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PBViewController.m; sourceTree = "<group>"; };
+		3B8861BD15BB216D000A63A1 /* PlanterBoxTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanterBoxTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B8861BE15BB216D000A63A1 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		3B8861C615BB216D000A63A1 /* PlanterBoxTests-Info.plist */ = {isa = PBXFileReference; path = "PlanterBoxTests-Info.plist"; sourceTree = "<group>"; };
+		3B8861C815BB216D000A63A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3B8861CA15BB216D000A63A1 /* PlanterBoxTests.h */ = {isa = PBXFileReference; path = PlanterBoxTests.h; sourceTree = "<group>"; };
+		3B8861CB15BB216D000A63A1 /* PlanterBoxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlanterBoxTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3B88619915BB216D000A63A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B8861A115BB216D000A63A1 /* UIKit.framework in Frameworks */,
+				3B8861A315BB216D000A63A1 /* Foundation.framework in Frameworks */,
+				3B8861A515BB216D000A63A1 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B8861B915BB216D000A63A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B8861BF15BB216D000A63A1 /* SenTestingKit.framework in Frameworks */,
+				3B8861C015BB216D000A63A1 /* UIKit.framework in Frameworks */,
+				3B8861C115BB216D000A63A1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B88619115BB216D000A63A1 = {
+			isa = PBXGroup;
+			children = (
+				3B8861A615BB216D000A63A1 /* PlanterBox */,
+				3B8861C415BB216D000A63A1 /* PlanterBoxTests */,
+				3B88619F15BB216D000A63A1 /* Frameworks */,
+				3B88619D15BB216D000A63A1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3B88619D15BB216D000A63A1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B88619C15BB216D000A63A1 /* PlanterBox.app */,
+				3B8861BD15BB216D000A63A1 /* PlanterBoxTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B88619F15BB216D000A63A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B8861A015BB216D000A63A1 /* UIKit.framework */,
+				3B8861A215BB216D000A63A1 /* Foundation.framework */,
+				3B8861A415BB216D000A63A1 /* CoreGraphics.framework */,
+				3B8861BE15BB216D000A63A1 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3B8861A615BB216D000A63A1 /* PlanterBox */ = {
+			isa = PBXGroup;
+			children = (
+				3B8861AF15BB216D000A63A1 /* PBAppDelegate.h */,
+				3B8861B015BB216D000A63A1 /* PBAppDelegate.m */,
+				3B8861B215BB216D000A63A1 /* MainStoryboard.storyboard */,
+				3B8861B515BB216D000A63A1 /* PBViewController.h */,
+				3B8861B615BB216D000A63A1 /* PBViewController.m */,
+				3B8861A715BB216D000A63A1 /* Supporting Files */,
+			);
+			path = PlanterBox;
+			sourceTree = "<group>";
+		};
+		3B8861A715BB216D000A63A1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B8861A815BB216D000A63A1 /* PlanterBox-Info.plist */,
+				3B8861A915BB216D000A63A1 /* InfoPlist.strings */,
+				3B8861AC15BB216D000A63A1 /* main.m */,
+				3B8861AE15BB216D000A63A1 /* PlanterBox-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3B8861C415BB216D000A63A1 /* PlanterBoxTests */ = {
+			isa = PBXGroup;
+			children = (
+				3B8861CA15BB216D000A63A1 /* PlanterBoxTests.h */,
+				3B8861CB15BB216D000A63A1 /* PlanterBoxTests.m */,
+				3B8861C515BB216D000A63A1 /* Supporting Files */,
+			);
+			path = PlanterBoxTests;
+			sourceTree = "<group>";
+		};
+		3B8861C515BB216D000A63A1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B8861C615BB216D000A63A1 /* PlanterBoxTests-Info.plist */,
+				3B8861C715BB216D000A63A1 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3B88619B15BB216D000A63A1 /* PlanterBox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B8861CF15BB216D000A63A1 /* Build configuration list for PBXNativeTarget "PlanterBox" */;
+			buildPhases = (
+				3B88619815BB216D000A63A1 /* Sources */,
+				3B88619915BB216D000A63A1 /* Frameworks */,
+				3B88619A15BB216D000A63A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlanterBox;
+			productName = PlanterBox;
+			productReference = 3B88619C15BB216D000A63A1 /* PlanterBox.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3B8861BC15BB216D000A63A1 /* PlanterBoxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B8861D215BB216D000A63A1 /* Build configuration list for PBXNativeTarget "PlanterBoxTests" */;
+			buildPhases = (
+				3B8861B815BB216D000A63A1 /* Sources */,
+				3B8861B915BB216D000A63A1 /* Frameworks */,
+				3B8861BA15BB216D000A63A1 /* Resources */,
+				3B8861BB15BB216D000A63A1 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3B8861C315BB216D000A63A1 /* PBXTargetDependency */,
+			);
+			name = PlanterBoxTests;
+			productName = PlanterBoxTests;
+			productReference = 3B8861BD15BB216D000A63A1 /* PlanterBoxTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3B88619315BB216D000A63A1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = PB;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 3B88619615BB216D000A63A1 /* Build configuration list for PBXProject "PlanterBox" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3B88619115BB216D000A63A1;
+			productRefGroup = 3B88619D15BB216D000A63A1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3B88619B15BB216D000A63A1 /* PlanterBox */,
+				3B8861BC15BB216D000A63A1 /* PlanterBoxTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3B88619A15BB216D000A63A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B8861AB15BB216D000A63A1 /* InfoPlist.strings in Resources */,
+				3B8861B415BB216D000A63A1 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B8861BA15BB216D000A63A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B8861C915BB216D000A63A1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3B8861BB15BB216D000A63A1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3B88619815BB216D000A63A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B8861AD15BB216D000A63A1 /* main.m in Sources */,
+				3B8861B115BB216D000A63A1 /* PBAppDelegate.m in Sources */,
+				3B8861B715BB216D000A63A1 /* PBViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B8861B815BB216D000A63A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B8861CC15BB216D000A63A1 /* PlanterBoxTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3B8861C315BB216D000A63A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B88619B15BB216D000A63A1 /* PlanterBox */;
+			targetProxy = 3B8861C215BB216D000A63A1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3B8861A915BB216D000A63A1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B8861AA15BB216D000A63A1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3B8861B215BB216D000A63A1 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B8861B315BB216D000A63A1 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		3B8861C715BB216D000A63A1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B8861C815BB216D000A63A1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3B8861CD15BB216D000A63A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3B8861CE15BB216D000A63A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3B8861D015BB216D000A63A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PlanterBox/PlanterBox-Prefix.pch";
+				INFOPLIST_FILE = "PlanterBox/PlanterBox-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3B8861D115BB216D000A63A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PlanterBox/PlanterBox-Prefix.pch";
+				INFOPLIST_FILE = "PlanterBox/PlanterBox-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3B8861D315BB216D000A63A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PlanterBox.app/PlanterBox";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PlanterBox/PlanterBox-Prefix.pch";
+				INFOPLIST_FILE = "PlanterBoxTests/PlanterBoxTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		3B8861D415BB216D000A63A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PlanterBox.app/PlanterBox";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PlanterBox/PlanterBox-Prefix.pch";
+				INFOPLIST_FILE = "PlanterBoxTests/PlanterBoxTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3B88619615BB216D000A63A1 /* Build configuration list for PBXProject "PlanterBox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B8861CD15BB216D000A63A1 /* Debug */,
+				3B8861CE15BB216D000A63A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B8861CF15BB216D000A63A1 /* Build configuration list for PBXNativeTarget "PlanterBox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B8861D015BB216D000A63A1 /* Debug */,
+				3B8861D115BB216D000A63A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3B8861D215BB216D000A63A1 /* Build configuration list for PBXNativeTarget "PlanterBoxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B8861D315BB216D000A63A1 /* Debug */,
+				3B8861D415BB216D000A63A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3B88619315BB216D000A63A1 /* Project object */;
+}
