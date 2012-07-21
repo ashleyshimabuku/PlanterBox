@@ -7,12 +7,23 @@
 //
 
 #import "PBPlantDetailTableViewController.h"
+#import "PBPlant.h"
 
 @interface PBPlantDetailTableViewController ()
 
 @end
 
 @implementation PBPlantDetailTableViewController
+
+@synthesize plant;
+
+- (void)setPlant:(PBPlant *)newPlant
+{
+    if (newPlant != plant){
+        plant = newPlant;
+        self.title = plant.name;
+    }
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {

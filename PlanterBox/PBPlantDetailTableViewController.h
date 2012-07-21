@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class PBPlant;
+
 @interface PBPlantDetailTableViewController : UITableViewController
+
+@property (nonatomic,strong) PBPlant* plant;
 
 @end

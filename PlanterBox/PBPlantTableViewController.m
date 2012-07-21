@@ -9,6 +9,7 @@
 #import "PBPlantTableViewController.h"
 #import "PBPlantDetailTableViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "PBPlant.h"
 
 @interface PBPlantTableViewController ()
 @property (nonatomic,strong) NSArray* plants;
@@ -30,7 +31,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.plants = [NSArray arrayWithObjects:@"Tomato",@"Cucumber",@"Bellpepper",@"Garlic", @"Onion",@"Potato", nil];
+    NSArray* plantNames = [NSArray arrayWithObjects:@"Tomato",@"Cucumber",@"Bellpepper",@"Garlic", @"Onion",@"Potato", nil];
+    NSMutableArray* tempPlants = [NSMutableArray array];
+    
+    for (NSString* name in plantNames){
+        PBPlant* plant = [[PBPlant alloc] init];
+        plant.name = name;
+        plant.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpeg", [name lowercaseString],nil]];
+        [tempPlants addObject:plant];
+    }
+    
+    self.plants = tempPlants;
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -74,9 +85,9 @@
     UILabel* textLabel = (UILabel*) [cell viewWithTag:101];
     
     // Configure the cell...
-    NSString* plant = [self.plants objectAtIndex:indexPath.row];
-    textLabel.text = plant;
-    imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpeg", [plant lowercaseString],nil]];
+    PBPlant* plant = [self.plants objectAtIndex:indexPath.row];
+    textLabel.text = plant.name;
+    imageView.image = plant.image;
     
     imageView.layer.cornerRadius = 8;
     imageView.layer.masksToBounds = YES;
@@ -140,9 +151,9 @@
 {
     if ([@"presentPlantDetail" isEqualToString:segue.identifier]){
         NSIndexPath *index = [self.tableView indexPathForCell:sender];
-        NSString *plant = [self.plants objectAtIndex:index.row];
+        PBPlant *plant = [self.plants objectAtIndex:index.row];
         PBPlantDetailTableViewController* detailViewController = segue.destinationViewController;
-        detailViewController.title = plant;
+        detailViewController.plant = plant;
     }
 }
 
