@@ -1,5 +1,5 @@
 //
-//  PBViewController.h
+//  PBPlantTableViewController.h
 //  PlanterBox
 //
 //  Created by Ashley Shimabuku on 7/21/12.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PBViewController : UIViewController
+@interface PBPlantTableViewController : UITableViewController
 
 @end

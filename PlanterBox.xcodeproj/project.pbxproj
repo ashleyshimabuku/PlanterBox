@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B4AB54B15BB35A80033F232 /* PBPlantTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4AB54A15BB35A80033F232 /* PBPlantTableViewController.m */; };
+		3B4AB55315BB3FDA0033F232 /* bellpepper.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B4AB54D15BB3FDA0033F232 /* bellpepper.jpeg */; };
+		3B4AB55415BB3FDA0033F232 /* cucumber.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B4AB54E15BB3FDA0033F232 /* cucumber.jpeg */; };
+		3B4AB55515BB3FDA0033F232 /* garlic.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B4AB54F15BB3FDA0033F232 /* garlic.jpeg */; };
+		3B4AB55615BB3FDA0033F232 /* onion.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B4AB55015BB3FDA0033F232 /* onion.jpeg */; };
+		3B4AB55715BB3FDA0033F232 /* potato.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B4AB55115BB3FDA0033F232 /* potato.jpeg */; };
+		3B4AB55815BB3FDA0033F232 /* tomato.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B4AB55215BB3FDA0033F232 /* tomato.jpeg */; };
+		3B4AB55A15BB554E0033F232 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4AB55915BB554E0033F232 /* QuartzCore.framework */; };
+		3B4AB55D15BB570C0033F232 /* PBPlantDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4AB55C15BB570C0033F232 /* PBPlantDetailTableViewController.m */; };
 		3B8861A115BB216D000A63A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8861A015BB216D000A63A1 /* UIKit.framework */; };
 		3B8861A315BB216D000A63A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8861A215BB216D000A63A1 /* Foundation.framework */; };
 		3B8861A515BB216D000A63A1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8861A415BB216D000A63A1 /* CoreGraphics.framework */; };
@@ -14,7 +23,6 @@
 		3B8861AD15BB216D000A63A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8861AC15BB216D000A63A1 /* main.m */; };
 		3B8861B115BB216D000A63A1 /* PBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8861B015BB216D000A63A1 /* PBAppDelegate.m */; };
 		3B8861B415BB216D000A63A1 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B8861B215BB216D000A63A1 /* MainStoryboard.storyboard */; };
-		3B8861B715BB216D000A63A1 /* PBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8861B615BB216D000A63A1 /* PBViewController.m */; };
 		3B8861BF15BB216D000A63A1 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8861BE15BB216D000A63A1 /* SenTestingKit.framework */; };
 		3B8861C015BB216D000A63A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8861A015BB216D000A63A1 /* UIKit.framework */; };
 		3B8861C115BB216D000A63A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8861A215BB216D000A63A1 /* Foundation.framework */; };
@@ -33,24 +41,33 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B4AB54915BB35A80033F232 /* PBPlantTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBPlantTableViewController.h; sourceTree = "<group>"; };
+		3B4AB54A15BB35A80033F232 /* PBPlantTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBPlantTableViewController.m; sourceTree = "<group>"; };
+		3B4AB54D15BB3FDA0033F232 /* bellpepper.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bellpepper.jpeg; sourceTree = "<group>"; };
+		3B4AB54E15BB3FDA0033F232 /* cucumber.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cucumber.jpeg; sourceTree = "<group>"; };
+		3B4AB54F15BB3FDA0033F232 /* garlic.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = garlic.jpeg; sourceTree = "<group>"; };
+		3B4AB55015BB3FDA0033F232 /* onion.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = onion.jpeg; sourceTree = "<group>"; };
+		3B4AB55115BB3FDA0033F232 /* potato.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = potato.jpeg; sourceTree = "<group>"; };
+		3B4AB55215BB3FDA0033F232 /* tomato.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tomato.jpeg; sourceTree = "<group>"; };
+		3B4AB55915BB554E0033F232 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3B4AB55B15BB570C0033F232 /* PBPlantDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBPlantDetailTableViewController.h; sourceTree = "<group>"; };
+		3B4AB55C15BB570C0033F232 /* PBPlantDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBPlantDetailTableViewController.m; sourceTree = "<group>"; };
 		3B88619C15BB216D000A63A1 /* PlanterBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanterBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B8861A015BB216D000A63A1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3B8861A215BB216D000A63A1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3B8861A415BB216D000A63A1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		3B8861A815BB216D000A63A1 /* PlanterBox-Info.plist */ = {isa = PBXFileReference; path = "PlanterBox-Info.plist"; sourceTree = "<group>"; };
+		3B8861A815BB216D000A63A1 /* PlanterBox-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PlanterBox-Info.plist"; sourceTree = "<group>"; };
 		3B8861AA15BB216D000A63A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3B8861AC15BB216D000A63A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3B8861AE15BB216D000A63A1 /* PlanterBox-Prefix.pch */ = {isa = PBXFileReference; path = "PlanterBox-Prefix.pch"; sourceTree = "<group>"; };
-		3B8861AF15BB216D000A63A1 /* PBAppDelegate.h */ = {isa = PBXFileReference; path = PBAppDelegate.h; sourceTree = "<group>"; };
+		3B8861AE15BB216D000A63A1 /* PlanterBox-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PlanterBox-Prefix.pch"; sourceTree = "<group>"; };
+		3B8861AF15BB216D000A63A1 /* PBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PBAppDelegate.h; sourceTree = "<group>"; };
 		3B8861B015BB216D000A63A1 /* PBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PBAppDelegate.m; sourceTree = "<group>"; };
 		3B8861B315BB216D000A63A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		3B8861B515BB216D000A63A1 /* PBViewController.h */ = {isa = PBXFileReference; path = PBViewController.h; sourceTree = "<group>"; };
-		3B8861B615BB216D000A63A1 /* PBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PBViewController.m; sourceTree = "<group>"; };
 		3B8861BD15BB216D000A63A1 /* PlanterBoxTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanterBoxTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B8861BE15BB216D000A63A1 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		3B8861C615BB216D000A63A1 /* PlanterBoxTests-Info.plist */ = {isa = PBXFileReference; path = "PlanterBoxTests-Info.plist"; sourceTree = "<group>"; };
+		3B8861C615BB216D000A63A1 /* PlanterBoxTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PlanterBoxTests-Info.plist"; sourceTree = "<group>"; };
 		3B8861C815BB216D000A63A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		3B8861CA15BB216D000A63A1 /* PlanterBoxTests.h */ = {isa = PBXFileReference; path = PlanterBoxTests.h; sourceTree = "<group>"; };
+		3B8861CA15BB216D000A63A1 /* PlanterBoxTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlanterBoxTests.h; sourceTree = "<group>"; };
 		3B8861CB15BB216D000A63A1 /* PlanterBoxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlanterBoxTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B4AB55A15BB554E0033F232 /* QuartzCore.framework in Frameworks */,
 				3B8861A115BB216D000A63A1 /* UIKit.framework in Frameworks */,
 				3B8861A315BB216D000A63A1 /* Foundation.framework in Frameworks */,
 				3B8861A515BB216D000A63A1 /* CoreGraphics.framework in Frameworks */,
@@ -78,9 +96,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B4AB54C15BB3FBD0033F232 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				3B4AB54D15BB3FDA0033F232 /* bellpepper.jpeg */,
+				3B4AB54E15BB3FDA0033F232 /* cucumber.jpeg */,
+				3B4AB54F15BB3FDA0033F232 /* garlic.jpeg */,
+				3B4AB55015BB3FDA0033F232 /* onion.jpeg */,
+				3B4AB55115BB3FDA0033F232 /* potato.jpeg */,
+				3B4AB55215BB3FDA0033F232 /* tomato.jpeg */,
+			);
+			name = Photos;
+			sourceTree = "<group>";
+		};
 		3B88619115BB216D000A63A1 = {
 			isa = PBXGroup;
 			children = (
+				3B4AB55915BB554E0033F232 /* QuartzCore.framework */,
 				3B8861A615BB216D000A63A1 /* PlanterBox */,
 				3B8861C415BB216D000A63A1 /* PlanterBoxTests */,
 				3B88619F15BB216D000A63A1 /* Frameworks */,
@@ -111,12 +143,15 @@
 		3B8861A615BB216D000A63A1 /* PlanterBox */ = {
 			isa = PBXGroup;
 			children = (
+				3B4AB54C15BB3FBD0033F232 /* Photos */,
 				3B8861AF15BB216D000A63A1 /* PBAppDelegate.h */,
 				3B8861B015BB216D000A63A1 /* PBAppDelegate.m */,
 				3B8861B215BB216D000A63A1 /* MainStoryboard.storyboard */,
-				3B8861B515BB216D000A63A1 /* PBViewController.h */,
-				3B8861B615BB216D000A63A1 /* PBViewController.m */,
 				3B8861A715BB216D000A63A1 /* Supporting Files */,
+				3B4AB54915BB35A80033F232 /* PBPlantTableViewController.h */,
+				3B4AB54A15BB35A80033F232 /* PBPlantTableViewController.m */,
+				3B4AB55B15BB570C0033F232 /* PBPlantDetailTableViewController.h */,
+				3B4AB55C15BB570C0033F232 /* PBPlantDetailTableViewController.m */,
 			);
 			path = PlanterBox;
 			sourceTree = "<group>";
@@ -224,6 +259,12 @@
 			files = (
 				3B8861AB15BB216D000A63A1 /* InfoPlist.strings in Resources */,
 				3B8861B415BB216D000A63A1 /* MainStoryboard.storyboard in Resources */,
+				3B4AB55315BB3FDA0033F232 /* bellpepper.jpeg in Resources */,
+				3B4AB55415BB3FDA0033F232 /* cucumber.jpeg in Resources */,
+				3B4AB55515BB3FDA0033F232 /* garlic.jpeg in Resources */,
+				3B4AB55615BB3FDA0033F232 /* onion.jpeg in Resources */,
+				3B4AB55715BB3FDA0033F232 /* potato.jpeg in Resources */,
+				3B4AB55815BB3FDA0033F232 /* tomato.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,7 +301,8 @@
 			files = (
 				3B8861AD15BB216D000A63A1 /* main.m in Sources */,
 				3B8861B115BB216D000A63A1 /* PBAppDelegate.m in Sources */,
-				3B8861B715BB216D000A63A1 /* PBViewController.m in Sources */,
+				3B4AB54B15BB35A80033F232 /* PBPlantTableViewController.m in Sources */,
+				3B4AB55D15BB570C0033F232 /* PBPlantDetailTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +472,7 @@
 				3B8861D115BB216D000A63A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3B8861D215BB216D000A63A1 /* Build configuration list for PBXNativeTarget "PlanterBoxTests" */ = {
 			isa = XCConfigurationList;
@@ -438,6 +481,7 @@
 				3B8861D415BB216D000A63A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
