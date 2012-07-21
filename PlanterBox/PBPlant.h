@@ -11,7 +11,6 @@
 @interface PBPlant : NSObject
 
 @property (nonatomic,copy) NSString* name;
-
-@property (nonatomic,strong) UIImage* image;
-
+@property (nonatomic,readonly) UIImage* image;
+@property (nonatomic,strong) NSArray* entries;
 @end

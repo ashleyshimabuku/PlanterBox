@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F1D23D315BB6DA20052DAF1 /* PBPlantEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1D23D215BB6DA20052DAF1 /* PBPlantEntry.m */; };
 		3B4AB54B15BB35A80033F232 /* PBPlantTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4AB54A15BB35A80033F232 /* PBPlantTableViewController.m */; };
 		3B4AB55315BB3FDA0033F232 /* bellpepper.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B4AB54D15BB3FDA0033F232 /* bellpepper.jpeg */; };
 		3B4AB55415BB3FDA0033F232 /* cucumber.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B4AB54E15BB3FDA0033F232 /* cucumber.jpeg */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F1D23D115BB6DA20052DAF1 /* PBPlantEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBPlantEntry.h; sourceTree = "<group>"; };
+		1F1D23D215BB6DA20052DAF1 /* PBPlantEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBPlantEntry.m; sourceTree = "<group>"; };
 		3B4AB54915BB35A80033F232 /* PBPlantTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBPlantTableViewController.h; sourceTree = "<group>"; };
 		3B4AB54A15BB35A80033F232 /* PBPlantTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBPlantTableViewController.m; sourceTree = "<group>"; };
 		3B4AB54D15BB3FDA0033F232 /* bellpepper.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bellpepper.jpeg; sourceTree = "<group>"; };
@@ -157,6 +160,8 @@
 				3B4AB55C15BB570C0033F232 /* PBPlantDetailTableViewController.m */,
 				3B4AB55E15BB62AE0033F232 /* PBPlant.h */,
 				3B4AB55F15BB62AE0033F232 /* PBPlant.m */,
+				1F1D23D115BB6DA20052DAF1 /* PBPlantEntry.h */,
+				1F1D23D215BB6DA20052DAF1 /* PBPlantEntry.m */,
 			);
 			path = PlanterBox;
 			sourceTree = "<group>";
@@ -309,6 +314,7 @@
 				3B4AB54B15BB35A80033F232 /* PBPlantTableViewController.m in Sources */,
 				3B4AB55D15BB570C0033F232 /* PBPlantDetailTableViewController.m in Sources */,
 				3B4AB56015BB62AE0033F232 /* PBPlant.m in Sources */,
+				1F1D23D315BB6DA20052DAF1 /* PBPlantEntry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

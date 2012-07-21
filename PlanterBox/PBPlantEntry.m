@@ -9,5 +9,7 @@
 #import "PBPlantEntry.h"
 
 @implementation PBPlantEntry
-
+@synthesize date;
+@synthesize image;
+@synthesize notes;
 @end

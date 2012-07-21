@@ -7,12 +7,17 @@
 //
 
 #import "PBPlant.h"
-
+#import "PBPlantEntry.h"
 @implementation PBPlant
 
 @synthesize name;
-
 @synthesize image;
+@synthesize entries;
 
+-(UIImage *)image
+{
+    PBPlantEntry* entry = [self.entries lastObject];
+    return entry.image;
+}
 
 @end

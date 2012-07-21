@@ -10,6 +10,7 @@
 #import "PBPlantDetailTableViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "PBPlant.h"
+#import "PBPlantEntry.h"
 
 @interface PBPlantTableViewController ()
 @property (nonatomic,strong) NSArray* plants;
@@ -37,7 +38,16 @@
     for (NSString* name in plantNames){
         PBPlant* plant = [[PBPlant alloc] init];
         plant.name = name;
-        plant.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpeg", [name lowercaseString],nil]];
+        
+        PBPlantEntry* entry  = [[PBPlantEntry alloc] init];
+        entry.date = [NSDate date];
+        entry.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpeg", [name lowercaseString],nil]];
+        entry.notes = [NSString stringWithFormat:@"Some notes about the %@", [name lowercaseString]];
+        
+        NSArray* entries = [NSArray arrayWithObject:entry];
+        
+        plant.entries = entries;
+        
         [tempPlants addObject:plant];
     }
     

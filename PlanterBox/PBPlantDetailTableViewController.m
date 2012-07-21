@@ -8,13 +8,18 @@
 
 #import "PBPlantDetailTableViewController.h"
 #import "PBPlant.h"
+#import "PBPlantEntry.h"
 
-@interface PBPlantDetailTableViewController ()
+@interface PBPlantDetailTableViewController () {
+    __strong NSDateFormatter* _dateFormatter;
+}
+@property (weak, nonatomic) IBOutlet UIImageView *plantImageView;
 
 @end
 
 @implementation PBPlantDetailTableViewController
 
+@synthesize plantImageView;
 @synthesize plant;
 
 - (void)setPlant:(PBPlant *)newPlant
@@ -37,6 +42,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSDateFormatter* dateFormatter = [NSDateFormatter new];
+    dateFormatter.locale = [NSLocale autoupdatingCurrentLocale];
+    dateFormatter.dateStyle = NSDateFormatterMediumStyle;
+    dateFormatter.timeZone = [NSTimeZone localTimeZone];
+
+    _dateFormatter = dateFormatter;
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -47,9 +58,16 @@
 
 - (void)viewDidUnload
 {
+    [self setPlantImageView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.plantImageView.image = self.plant.image;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -61,24 +79,27 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return self.plant.entries.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"EntryCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
+    PBPlantEntry* entry = [self.plant.entries objectAtIndex:indexPath.row];
+
     // Configure the cell...
+
+    cell.textLabel.text = [_dateFormatter stringFromDate:entry.date];
+    cell.imageView.image = entry.image;
+    cell.detailTextLabel.text = entry.notes;
     
     return cell;
 }

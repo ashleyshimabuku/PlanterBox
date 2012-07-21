@@ -9,5 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface PBPlantEntry : NSObject
-
+@property (nonatomic, strong) NSDate* date;
+@property (nonatomic, copy) NSString* notes;
+@property (nonatomic,strong) UIImage* image;
 @end
