@@ -19,6 +19,7 @@
 		3B4AB55D15BB570C0033F232 /* PBPlantDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4AB55C15BB570C0033F232 /* PBPlantDetailTableViewController.m */; };
 		3B4AB56015BB62AE0033F232 /* PBPlant.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4AB55F15BB62AE0033F232 /* PBPlant.m */; };
 		3B4AB56715BB7A2F0033F232 /* PBPlantEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4AB56615BB7A2F0033F232 /* PBPlantEntryViewController.m */; };
+		3B4AB56B15BB823F0033F232 /* PBPlantEntryEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4AB56A15BB823F0033F232 /* PBPlantEntryEditViewController.m */; };
 		3B8861A115BB216D000A63A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8861A015BB216D000A63A1 /* UIKit.framework */; };
 		3B8861A315BB216D000A63A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8861A215BB216D000A63A1 /* Foundation.framework */; };
 		3B8861A515BB216D000A63A1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8861A415BB216D000A63A1 /* CoreGraphics.framework */; };
@@ -61,6 +62,8 @@
 		3B4AB55F15BB62AE0033F232 /* PBPlant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBPlant.m; sourceTree = "<group>"; };
 		3B4AB56515BB7A2F0033F232 /* PBPlantEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBPlantEntryViewController.h; sourceTree = "<group>"; };
 		3B4AB56615BB7A2F0033F232 /* PBPlantEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBPlantEntryViewController.m; sourceTree = "<group>"; };
+		3B4AB56915BB823F0033F232 /* PBPlantEntryEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBPlantEntryEditViewController.h; sourceTree = "<group>"; };
+		3B4AB56A15BB823F0033F232 /* PBPlantEntryEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBPlantEntryEditViewController.m; sourceTree = "<group>"; };
 		3B88619C15BB216D000A63A1 /* PlanterBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanterBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B8861A015BB216D000A63A1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3B8861A215BB216D000A63A1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -152,21 +155,23 @@
 		3B8861A615BB216D000A63A1 /* PlanterBox */ = {
 			isa = PBXGroup;
 			children = (
-				3B4AB54C15BB3FBD0033F232 /* Photos */,
+				3B8861B215BB216D000A63A1 /* MainStoryboard.storyboard */,
 				3B8861AF15BB216D000A63A1 /* PBAppDelegate.h */,
 				3B8861B015BB216D000A63A1 /* PBAppDelegate.m */,
-				3B8861B215BB216D000A63A1 /* MainStoryboard.storyboard */,
-				3B8861A715BB216D000A63A1 /* Supporting Files */,
-				3B4AB54915BB35A80033F232 /* PBPlantTableViewController.h */,
-				3B4AB54A15BB35A80033F232 /* PBPlantTableViewController.m */,
-				3B4AB55B15BB570C0033F232 /* PBPlantDetailTableViewController.h */,
-				3B4AB55C15BB570C0033F232 /* PBPlantDetailTableViewController.m */,
 				3B4AB55E15BB62AE0033F232 /* PBPlant.h */,
 				3B4AB55F15BB62AE0033F232 /* PBPlant.m */,
+				3B4AB55B15BB570C0033F232 /* PBPlantDetailTableViewController.h */,
+				3B4AB55C15BB570C0033F232 /* PBPlantDetailTableViewController.m */,
 				1F1D23D115BB6DA20052DAF1 /* PBPlantEntry.h */,
 				1F1D23D215BB6DA20052DAF1 /* PBPlantEntry.m */,
+				3B4AB56915BB823F0033F232 /* PBPlantEntryEditViewController.h */,
+				3B4AB56A15BB823F0033F232 /* PBPlantEntryEditViewController.m */,
 				3B4AB56515BB7A2F0033F232 /* PBPlantEntryViewController.h */,
 				3B4AB56615BB7A2F0033F232 /* PBPlantEntryViewController.m */,
+				3B4AB54915BB35A80033F232 /* PBPlantTableViewController.h */,
+				3B4AB54A15BB35A80033F232 /* PBPlantTableViewController.m */,
+				3B4AB54C15BB3FBD0033F232 /* Photos */,
+				3B8861A715BB216D000A63A1 /* Supporting Files */,
 			);
 			path = PlanterBox;
 			sourceTree = "<group>";
@@ -321,6 +326,7 @@
 				3B4AB56015BB62AE0033F232 /* PBPlant.m in Sources */,
 				1F1D23D315BB6DA20052DAF1 /* PBPlantEntry.m in Sources */,
 				3B4AB56715BB7A2F0033F232 /* PBPlantEntryViewController.m in Sources */,
+				3B4AB56B15BB823F0033F232 /* PBPlantEntryEditViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
