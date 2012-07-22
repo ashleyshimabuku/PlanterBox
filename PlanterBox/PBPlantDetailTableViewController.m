@@ -14,14 +14,10 @@
 
 @interface PBPlantDetailTableViewController ()
 
-@property (weak, nonatomic) IBOutlet UIImageView *plantImageView;
-@property (nonatomic,strong) NSDateFormatter* dateFormatter;
-
 @end
 
 @implementation PBPlantDetailTableViewController
 
-@synthesize plantImageView;
 @synthesize plant;
 @synthesize dateFormatter;
 
@@ -31,17 +27,6 @@
         plant = newPlant;
         self.title = plant.name;
     }
-}
-
-- (NSDateFormatter *)dateFormatter
-{
-    if (!dateFormatter){
-        dateFormatter = [NSDateFormatter new];
-        dateFormatter.locale = [NSLocale autoupdatingCurrentLocale];
-        dateFormatter.dateStyle = NSDateFormatterMediumStyle;
-        dateFormatter.timeZone = [NSTimeZone localTimeZone];
-    }
-    return dateFormatter;
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -66,7 +51,6 @@
 
 - (void)viewDidUnload
 {
-    [self setPlantImageView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -75,7 +59,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.plantImageView.image = self.plant.image;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -97,18 +80,34 @@
     return self.plant.entries.count;
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    CGFloat height = 44;
+    if (indexPath.row == 0) {
+        height = 160;
+    }
+    return height;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    static NSString *MainCellIdentifier = @"MainEntryCell";    
     static NSString *CellIdentifier = @"EntryCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    PBPlantEntry* entry = [self.plant.entries objectAtIndex:indexPath.row];
-
-    // Configure the cell...
-
-    cell.textLabel.text = [dateFormatter stringFromDate:entry.date];
-    cell.imageView.image = entry.image;
-    cell.detailTextLabel.text = entry.notes;
+    PBPlantEntry* entry = [self.plant.entries objectAtIndex:indexPath.row];    
+    UITableViewCell *cell = nil;
     
+    if (indexPath.row == 0) {
+        cell = [tableView dequeueReusableCellWithIdentifier:MainCellIdentifier];
+        UIImageView* imageView = (UIImageView*)[cell viewWithTag:102];
+        UILabel* dateLabel = (UILabel*)[cell viewWithTag:103];        
+        imageView.image = entry.image;
+        dateLabel.text = [self.dateFormatter stringFromDate:entry.date];
+    } else {
+        cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        cell.textLabel.text = [dateFormatter stringFromDate:entry.date];
+        cell.imageView.image = entry.image;
+        cell.detailTextLabel.text = entry.notes;
+    }    
     return cell;
 }
 
@@ -185,6 +184,7 @@
         UINavigationController* navController = segue.destinationViewController;
         PBPlantEntryEditViewController* editViewController = [navController.viewControllers objectAtIndex:0];
         editViewController.delegate = self;
+        editViewController.dateFormatter = self.dateFormatter;
     }
 }
 

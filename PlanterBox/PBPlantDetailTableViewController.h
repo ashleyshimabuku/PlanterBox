@@ -14,5 +14,6 @@
 @interface PBPlantDetailTableViewController : UITableViewController<PBPlantEntryEditViewControllerDelegate>
 
 @property (nonatomic,strong) PBPlant* plant;
+@property (nonatomic,strong) NSDateFormatter* dateFormatter;
 
 @end

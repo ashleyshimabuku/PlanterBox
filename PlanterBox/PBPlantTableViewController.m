@@ -15,11 +15,23 @@
 
 @interface PBPlantTableViewController ()
 @property (nonatomic,strong) NSArray* plants;
-
+@property (nonatomic,strong) NSDateFormatter* dateFormatter;
 @end
 
 @implementation PBPlantTableViewController
 @synthesize plants;
+@synthesize dateFormatter;
+
+- (NSDateFormatter *)dateFormatter
+{
+    if (!dateFormatter){
+        dateFormatter = [NSDateFormatter new];
+        dateFormatter.locale = [NSLocale autoupdatingCurrentLocale];
+        dateFormatter.dateStyle = NSDateFormatterLongStyle;
+        dateFormatter.timeZone = [NSTimeZone localTimeZone];
+    }
+    return dateFormatter;
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -175,11 +187,13 @@
         PBPlant *plant = [self.plants objectAtIndex:index.row];
         PBPlantDetailTableViewController* detailViewController = segue.destinationViewController;
         detailViewController.plant = plant;
+        detailViewController.dateFormatter = self.dateFormatter;
     } else if ([@"presentEditView" isEqualToString:segue.identifier]) {
         UINavigationController* navController = segue.destinationViewController;
         PBPlantEntryEditViewController* editViewController = [navController.viewControllers objectAtIndex:0];
         editViewController.title = @"New Plant";
         editViewController.delegate = self;
+        editViewController.dateFormatter = self.dateFormatter;
     }
 }
 

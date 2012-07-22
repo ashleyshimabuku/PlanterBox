@@ -89,6 +89,7 @@
         PBPlantEntryEditViewController* editViewController = [navController.viewControllers objectAtIndex:0];
         editViewController.plantEntry = self.plantEntry;
         editViewController.delegate = self;
+        editViewController.dateFormatter = self.dateFormatter;
     }
 }
 

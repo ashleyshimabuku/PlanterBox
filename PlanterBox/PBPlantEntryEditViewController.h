@@ -19,4 +19,5 @@
 @interface PBPlantEntryEditViewController : UIViewController
 @property (nonatomic, strong) PBPlantEntry* plantEntry;
 @property (nonatomic, weak) id<PBPlantEntryEditViewControllerDelegate> delegate;
+@property (nonatomic, strong) NSDateFormatter* dateFormatter;
 @end
