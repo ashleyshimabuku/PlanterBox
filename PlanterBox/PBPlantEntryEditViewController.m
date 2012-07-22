@@ -10,7 +10,9 @@
 #import "PBPlantEntry.h"
 #import "PBPlant.h"
 
-@interface PBPlantEntryEditViewController ()
+@interface PBPlantEntryEditViewController (){
+    __strong UIImage* newImage;
+}
 @property (weak, nonatomic) IBOutlet UIImageView *plantImageView;
 @property (weak, nonatomic) IBOutlet UITextField *plantNameTextField;
 @property (weak, nonatomic) IBOutlet UIButton *entryDateButton;
@@ -72,7 +74,11 @@
         NSString *dateString = [self.dateFormatter stringFromDate:self.plantEntry.date];
         [self.entryDateButton setTitle:dateString forState:UIControlStateNormal];
         self.plantNameTextField.text = self.plantEntry.plant.name;
-        self.plantImageView.image = self.plantEntry.image;
+        if (newImage) {
+            self.plantImageView.image = newImage;
+        } else{
+            self.plantImageView.image = self.plantEntry.image;
+        }
         self.notesTextView.text = self.plantEntry.notes;
     }
 }
@@ -91,6 +97,52 @@
 {
     [self.delegate plantEntryEditViewControllerDidSave:self];
 }
+
 - (IBAction)showImagePicker:(id)sender {
+    UIActionSheet* sheet = nil;
+    
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
+        sheet = [[UIActionSheet alloc] initWithTitle:nil 
+                                            delegate:self 
+                                   cancelButtonTitle:@"Cancel" 
+                              destructiveButtonTitle:@"Delete Picture" 
+                                   otherButtonTitles:@"Take Picture",@"Choose Existing", nil];
+    } else {
+        sheet = [[UIActionSheet alloc] initWithTitle:nil 
+                                            delegate:self 
+                                   cancelButtonTitle:@"Cancel" 
+                              destructiveButtonTitle:@"Delete Picture" 
+                                   otherButtonTitles:@"Choose Existing", nil];
+    }
+    
+    sheet.actionSheetStyle = UIActionSheetStyleBlackTranslucent;
+    [sheet showInView:self.view];
 }
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    BOOL isCameraAvailable = [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera];
+    
+    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+    imagePicker.delegate = self;
+    imagePicker.allowsEditing = NO;
+
+    // Use camera
+    if (isCameraAvailable && buttonIndex == 1) {
+        imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        imagePicker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
+    } else if ((isCameraAvailable && buttonIndex == 2) || (!isCameraAvailable && buttonIndex == 1)){
+        // Use library
+        imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    }
+    [self presentModalViewController:imagePicker animated:YES];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    newImage = [info valueForKey:UIImagePickerControllerOriginalImage];
+    [self dismissModalViewControllerAnimated:YES];
+
+}
+
 @end

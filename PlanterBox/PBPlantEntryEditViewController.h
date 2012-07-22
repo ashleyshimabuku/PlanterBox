@@ -16,7 +16,7 @@
 - (void)plantEntryEditViewControllerDidSave:(PBPlantEntryEditViewController*)plantEntryEditViewController;
 @end
 
-@interface PBPlantEntryEditViewController : UIViewController
+@interface PBPlantEntryEditViewController : UIViewController<UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 @property (nonatomic, strong) PBPlantEntry* plantEntry;
 @property (nonatomic, weak) id<PBPlantEntryEditViewControllerDelegate> delegate;
 @property (nonatomic, strong) NSDateFormatter* dateFormatter;
