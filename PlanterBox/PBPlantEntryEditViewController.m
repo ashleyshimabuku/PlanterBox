@@ -68,6 +68,7 @@
 {
     [super viewWillAppear:animated];
     if (self.plantEntry) {
+#warning TODO-JR: Set date on button and add dateformatter                
         self.plantNameTextField.text = self.plantEntry.plant.name;
         self.plantImageView.image = self.plantEntry.image;
         self.notesTextView.text = self.plantEntry.notes;
