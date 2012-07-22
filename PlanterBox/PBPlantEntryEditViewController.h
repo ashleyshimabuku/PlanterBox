@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PBPlantEntryEditViewController : UIViewController
+@class PBPlantEntryEditViewController;
+@class PBPlantEntry;
 
+@protocol PBPlantEntryEditViewControllerDelegate <NSObject>
+- (void)plantEntryEditViewControllerDidCancel:(PBPlantEntryEditViewController*)plantEntryEditViewController;
+- (void)plantEntryEditViewControllerDidSave:(PBPlantEntryEditViewController*)plantEntryEditViewController;
+@end
+
+@interface PBPlantEntryEditViewController : UIViewController
+@property (nonatomic, strong) PBPlantEntry* plantEntry;
+@property (nonatomic, weak) id<PBPlantEntryEditViewControllerDelegate> delegate;
 @end

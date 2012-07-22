@@ -8,6 +8,7 @@
 
 #import "PBPlantTableViewController.h"
 #import "PBPlantDetailTableViewController.h"
+#import "PBPlantEntryEditViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "PBPlant.h"
 #import "PBPlantEntry.h"
@@ -43,7 +44,7 @@
         entry.date = [NSDate date];
         entry.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpeg", [name lowercaseString],nil]];
         entry.notes = [NSString stringWithFormat:@"Some notes about the %@", [name lowercaseString]];
-        
+        entry.plant = plant;
         NSArray* entries = [NSArray arrayWithObject:entry];
         
         plant.entries = entries;
@@ -157,6 +158,16 @@
      */
 }
 
+- (void)plantEntryEditViewControllerDidCancel:(PBPlantEntryEditViewController *)plantEntryEditViewController
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)plantEntryEditViewControllerDidSave:(PBPlantEntryEditViewController *)plantEntryEditViewController
+{
+    [self dismissViewControllerAnimated:YES completion:nil];    
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([@"presentPlantDetail" isEqualToString:segue.identifier]){
@@ -164,6 +175,11 @@
         PBPlant *plant = [self.plants objectAtIndex:index.row];
         PBPlantDetailTableViewController* detailViewController = segue.destinationViewController;
         detailViewController.plant = plant;
+    } else if ([@"presentEditView" isEqualToString:segue.identifier]) {
+        UINavigationController* navController = segue.destinationViewController;
+        PBPlantEntryEditViewController* editViewController = [navController.viewControllers objectAtIndex:0];
+        editViewController.title = @"New Plant";
+        editViewController.delegate = self;
     }
 }
 

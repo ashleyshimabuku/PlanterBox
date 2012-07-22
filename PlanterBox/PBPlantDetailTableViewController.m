@@ -10,6 +10,7 @@
 #import "PBPlant.h"
 #import "PBPlantEntry.h"
 #import "PBPlantEntryViewController.h"
+#import "PBPlantEntryEditViewController.h"
 
 @interface PBPlantDetailTableViewController ()
 
@@ -163,6 +164,16 @@
      */
 }
 
+- (void)plantEntryEditViewControllerDidCancel:(PBPlantEntryEditViewController *)plantEntryEditViewController
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)plantEntryEditViewControllerDidSave:(PBPlantEntryEditViewController *)plantEntryEditViewController
+{
+    [self dismissViewControllerAnimated:YES completion:nil];    
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([@"presentPlantEntryDetail" isEqualToString:segue.identifier]){
         NSIndexPath* index = [self.tableView indexPathForCell:sender];
@@ -170,6 +181,10 @@
         PBPlantEntryViewController* entryViewController = segue.destinationViewController;
         entryViewController.plantEntry = entry;
         entryViewController.dateFormatter = self.dateFormatter;
+    } else if ([@"presentEditView" isEqualToString:segue.identifier]) {
+        UINavigationController* navController = segue.destinationViewController;
+        PBPlantEntryEditViewController* editViewController = [navController.viewControllers objectAtIndex:0];
+        editViewController.delegate = self;
     }
 }
 

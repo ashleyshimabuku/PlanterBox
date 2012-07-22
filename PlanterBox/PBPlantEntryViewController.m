@@ -8,6 +8,7 @@
 
 #import "PBPlantEntryViewController.h"
 #import "PBPlantEntry.h"
+#import "PBPlant.h"
 
 @interface PBPlantEntryViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *plantImageView;
@@ -23,6 +24,15 @@
 
 @synthesize plantEntry;
 @synthesize dateFormatter;
+
+-(void)setPlantEntry:(PBPlantEntry *)newPlantEntry
+{
+    if(plantEntry != newPlantEntry) {
+        plantEntry = newPlantEntry;
+        self.title = plantEntry.plant.name;
+    }
+}
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -60,6 +70,26 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void)plantEntryEditViewControllerDidCancel:(PBPlantEntryEditViewController *)plantEntryEditViewController
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)plantEntryEditViewControllerDidSave:(PBPlantEntryEditViewController *)plantEntryEditViewController
+{
+    [self dismissViewControllerAnimated:YES completion:nil];    
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([@"presentEditView" isEqualToString:segue.identifier]) {
+        UINavigationController* navController = segue.destinationViewController;
+        PBPlantEntryEditViewController* editViewController = [navController.viewControllers objectAtIndex:0];
+        editViewController.plantEntry = self.plantEntry;
+        editViewController.delegate = self;
+    }
 }
 
 @end

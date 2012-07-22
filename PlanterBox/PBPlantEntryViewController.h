@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PBPlantEntryEditViewController.h"
 
 @class PBPlantEntry;
 
-@interface PBPlantEntryViewController : UIViewController
+@interface PBPlantEntryViewController : UIViewController<PBPlantEntryEditViewControllerDelegate>
 
 @property (nonatomic,strong) PBPlantEntry* plantEntry;
 @property (nonatomic,strong) NSDateFormatter* dateFormatter;

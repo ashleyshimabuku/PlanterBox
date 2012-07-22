@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PBPlantEntryEditViewController.h"
 
 @class PBPlant;
 
-@interface PBPlantDetailTableViewController : UITableViewController
+@interface PBPlantDetailTableViewController : UITableViewController<PBPlantEntryEditViewControllerDelegate>
 
 @property (nonatomic,strong) PBPlant* plant;
 

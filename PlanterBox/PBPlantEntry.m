@@ -7,9 +7,11 @@
 //
 
 #import "PBPlantEntry.h"
+#import "PBPlant.h"
 
 @implementation PBPlantEntry
 @synthesize date;
 @synthesize image;
 @synthesize notes;
+@synthesize plant;
 @end

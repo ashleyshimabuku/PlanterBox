@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1F1D23D315BB6DA20052DAF1 /* PBPlantEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1D23D215BB6DA20052DAF1 /* PBPlantEntry.m */; };
+		1F1D240D15BB92E70052DAF1 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F1D240B15BB92E70052DAF1 /* placeholder.png */; };
+		1F1D240E15BB92E70052DAF1 /* placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F1D240C15BB92E70052DAF1 /* placeholder@2x.png */; };
 		3B4AB54B15BB35A80033F232 /* PBPlantTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4AB54A15BB35A80033F232 /* PBPlantTableViewController.m */; };
 		3B4AB55315BB3FDA0033F232 /* bellpepper.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B4AB54D15BB3FDA0033F232 /* bellpepper.jpeg */; };
 		3B4AB55415BB3FDA0033F232 /* cucumber.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B4AB54E15BB3FDA0033F232 /* cucumber.jpeg */; };
@@ -47,6 +49,8 @@
 /* Begin PBXFileReference section */
 		1F1D23D115BB6DA20052DAF1 /* PBPlantEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBPlantEntry.h; sourceTree = "<group>"; };
 		1F1D23D215BB6DA20052DAF1 /* PBPlantEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBPlantEntry.m; sourceTree = "<group>"; };
+		1F1D240B15BB92E70052DAF1 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
+		1F1D240C15BB92E70052DAF1 /* placeholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholder@2x.png"; sourceTree = "<group>"; };
 		3B4AB54915BB35A80033F232 /* PBPlantTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBPlantTableViewController.h; sourceTree = "<group>"; };
 		3B4AB54A15BB35A80033F232 /* PBPlantTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBPlantTableViewController.m; sourceTree = "<group>"; };
 		3B4AB54D15BB3FDA0033F232 /* bellpepper.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bellpepper.jpeg; sourceTree = "<group>"; };
@@ -108,6 +112,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F1D240915BB92DC0052DAF1 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				1F1D240B15BB92E70052DAF1 /* placeholder.png */,
+				1F1D240C15BB92E70052DAF1 /* placeholder@2x.png */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
 		3B4AB54C15BB3FBD0033F232 /* Photos */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +168,7 @@
 		3B8861A615BB216D000A63A1 /* PlanterBox */ = {
 			isa = PBXGroup;
 			children = (
+				1F1D240915BB92DC0052DAF1 /* Assets */,
 				3B8861B215BB216D000A63A1 /* MainStoryboard.storyboard */,
 				3B8861AF15BB216D000A63A1 /* PBAppDelegate.h */,
 				3B8861B015BB216D000A63A1 /* PBAppDelegate.m */,
@@ -285,6 +299,8 @@
 				3B4AB55615BB3FDA0033F232 /* onion.jpeg in Resources */,
 				3B4AB55715BB3FDA0033F232 /* potato.jpeg in Resources */,
 				3B4AB55815BB3FDA0033F232 /* tomato.jpeg in Resources */,
+				1F1D240D15BB92E70052DAF1 /* placeholder.png in Resources */,
+				1F1D240E15BB92E70052DAF1 /* placeholder@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

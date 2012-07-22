@@ -8,8 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+@class PBPlant;
+
 @interface PBPlantEntry : NSObject
 @property (nonatomic, strong) NSDate* date;
 @property (nonatomic, copy) NSString* notes;
-@property (nonatomic,strong) UIImage* image;
+@property (nonatomic, strong) UIImage* image;
+@property (nonatomic, strong) PBPlant* plant;
 @end

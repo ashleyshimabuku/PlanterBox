@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PBPlantEntryEditViewController.h"
 
-@interface PBPlantTableViewController : UITableViewController
+@interface PBPlantTableViewController : UITableViewController<PBPlantEntryEditViewControllerDelegate>
 
 @end
