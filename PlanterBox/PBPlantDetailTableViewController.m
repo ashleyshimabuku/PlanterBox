@@ -9,11 +9,12 @@
 #import "PBPlantDetailTableViewController.h"
 #import "PBPlant.h"
 #import "PBPlantEntry.h"
+#import "PBPlantEntryViewController.h"
 
-@interface PBPlantDetailTableViewController () {
-    __strong NSDateFormatter* _dateFormatter;
-}
+@interface PBPlantDetailTableViewController ()
+
 @property (weak, nonatomic) IBOutlet UIImageView *plantImageView;
+@property (nonatomic,strong) NSDateFormatter* dateFormatter;
 
 @end
 
@@ -21,6 +22,7 @@
 
 @synthesize plantImageView;
 @synthesize plant;
+@synthesize dateFormatter;
 
 - (void)setPlant:(PBPlant *)newPlant
 {
@@ -28,6 +30,17 @@
         plant = newPlant;
         self.title = plant.name;
     }
+}
+
+- (NSDateFormatter *)dateFormatter
+{
+    if (!dateFormatter){
+        dateFormatter = [NSDateFormatter new];
+        dateFormatter.locale = [NSLocale autoupdatingCurrentLocale];
+        dateFormatter.dateStyle = NSDateFormatterMediumStyle;
+        dateFormatter.timeZone = [NSTimeZone localTimeZone];
+    }
+    return dateFormatter;
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -42,12 +55,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSDateFormatter* dateFormatter = [NSDateFormatter new];
-    dateFormatter.locale = [NSLocale autoupdatingCurrentLocale];
-    dateFormatter.dateStyle = NSDateFormatterMediumStyle;
-    dateFormatter.timeZone = [NSTimeZone localTimeZone];
-
-    _dateFormatter = dateFormatter;
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -97,7 +104,7 @@
 
     // Configure the cell...
 
-    cell.textLabel.text = [_dateFormatter stringFromDate:entry.date];
+    cell.textLabel.text = [dateFormatter stringFromDate:entry.date];
     cell.imageView.image = entry.image;
     cell.detailTextLabel.text = entry.notes;
     
@@ -154,6 +161,16 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([@"presentPlantEntryDetail" isEqualToString:segue.identifier]){
+        NSIndexPath* index = [self.tableView indexPathForCell:sender];
+        PBPlantEntry* entry = [self.plant.entries objectAtIndex:index.row];
+        PBPlantEntryViewController* entryViewController = segue.destinationViewController;
+        entryViewController.plantEntry = entry;
+        entryViewController.dateFormatter = self.dateFormatter;
+    }
 }
 
 @end

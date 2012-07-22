@@ -73,11 +73,11 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         </view>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="EntryCell" textLabel="Zi1-yw-4MM" detailTextLabel="V0a-vl-US2" imageView="s1K-jo-jip" style="IBUITableViewCellStyleSubtitle" id="7vK-hH-3q8">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="EntryCell" textLabel="Zi1-yw-4MM" detailTextLabel="V0a-vl-US2" imageView="s1K-jo-jip" style="IBUITableViewCellStyleSubtitle" id="7vK-hH-3q8">
                                 <rect key="frame" x="0.0" y="182" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zi1-yw-4MM">
@@ -101,6 +101,9 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <connections>
+                                    <segue destination="she-13-efn" kind="push" identifier="presentPlantEntryDetail" id="FbW-7i-nGj"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -115,6 +118,49 @@
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1202" y="153"/>
+        </scene>
+        <!--Plant Entry View Controller-->
+        <scene sceneID="eCl-dm-Ugt">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="044-OD-HuD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="she-13-efn" customClass="PBPlantEntryViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sW7-yL-yMk">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="tomato.jpeg" id="AjV-TI-KDf">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="July 21, 2012" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="T6u-C3-4PX">
+                                <rect key="frame" x="133" y="110" width="167" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="oid-cE-jp3">
+                                <rect key="frame" x="20" y="168" width="280" height="239"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="y0a-dJ-fcc"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="T6u-C3-4PX" id="LFR-nd-rg9"/>
+                        <outlet property="notesTextView" destination="oid-cE-jp3" id="Hdi-sD-MJZ"/>
+                        <outlet property="plantImageView" destination="AjV-TI-KDf" id="Kv0-Bc-37n"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1587" y="153"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="95i-Ac-TdL">
@@ -142,6 +188,14 @@
         <class className="PBPlantDetailTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PBPlantDetailTableViewController.h"/>
             <relationships>
+                <relationship kind="outlet" name="plantImageView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="PBPlantEntryViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PBPlantEntryViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="notesTextView" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="plantImageView" candidateClass="UIImageView"/>
             </relationships>
         </class>
